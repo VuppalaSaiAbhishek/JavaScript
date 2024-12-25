@@ -7,12 +7,14 @@
 </head>
 <body>
     <script>
-        var a = prompt("Enter a Number");
-        for(var i=1;i<=a;i++){
-            if(i%2==0){
-                document.write(i+"<br>");
-            }
+        var a = prompt("Enter A Year");
+        if((a%400==0)||(a%4==0 && a%100!=0)){
+            document.write("It is Leap Year");
         }
+        else
+        {
+            document.write("It is Not a Leap Year");
+        } 
     </script>
 </body>
 </html>
