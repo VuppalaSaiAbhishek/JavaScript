@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Enter a Number"))
+        var b  = a;
+        var reverse = "";
+        while(a!=0){
+            reverse = reverse+a%10;
+            a = parseInt(a/10);
+        }
+        if(reverse==b){
+            document.write("Palidorm")
+        }
+        else{
+            document.write("Not a Palidrom")
+        }
+    </script>
+</body>
+</html>
