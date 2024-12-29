@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = [
+            { name: 'John', age: 17 },
+            { name: 'Jane', age: 19 },
+            { name: 'Jack', age: 18 },
+        ];
+        var cs = students.map((ele)=>{
+            if(ele.age>=18){
+                ele.isAdult=true;
+            }
+            else
+            {
+                ele.isAdult=false;
+            }
+            return ele;
+        })
+        console.log(cs)
+
+    </script>
+</body>
+</html>

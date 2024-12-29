@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+            { name: 'Bob', salary: 60000 },
+            { name: 'Charlie', salary: 40000 },
+            { name: 'Alice', salary: 50000 },
+        ];
+        let a = parseInt(prompt("Enter a Value"));
+        var b = employees.filter((ele)=>ele.salary>a).map((ele)=>ele.name);
+        console.log(b.sort())
+
+    </script>
+</body>
+</html>

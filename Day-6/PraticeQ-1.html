@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = { a: 1, b: 2, c: 3, d: 4 };
+        const keys = ['b','c'];
+        var a = keys.reduce((acc,curr)=>{
+            if(obj[curr]){
+                acc[curr] = obj[curr];
+            }
+            return acc
+        },{})
+        console.log(a);
+    </script>
+</body>
+</html>
