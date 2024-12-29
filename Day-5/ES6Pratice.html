@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+		const students = [
+			{ name: "Alice", marks: 85 },
+  			{ name: "Bob", marks: 45 },
+  			{ name: "Charlie", marks: 75 },
+  			{ name: "David", marks: 50 },
+  			{ name: "Eve", marks: 30 },
+			];
+
+
+//Task
+
+//1) Use filter to separate students who passed (marks >= 50).
+
+//2) Use reduce to count how many students passed and how many failed.
+
+//3) Create an array of names for students who scored more than 80 (use map after filter).
+
+
+		var passed = students.filter((ele)=>ele.marks>50)
+		var {pass,Fail} = students.reduce((acc,curr)=>{
+			if(curr.marks>=50){
+				acc.pass++;
+			}
+			else{
+				acc.Fail++;
+			}
+			return acc
+		},{pass:0,Fail:0});
+		console.log(passed);
+		console.log({pass,Fail});
+
+
+		var psu = students.filter((ele)=>ele.marks>=50).map((ele)=>{return ele.name})
+		console.log(psu);
+	</script>
+</body>
+</html>

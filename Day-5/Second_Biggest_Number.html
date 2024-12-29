@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [24,0,0,0,0,0,0,0,0];
+        var fb = -Infinity
+        var sb = -Infinity
+        for (let i of a){
+            if(i>fb){
+                sb = fb;
+                fb = i;
+            }
+            else{
+                if(i>sb && i<fb){
+                    sb = i;
+                }
+            }
+        }
+        document.write(fb+"<br>");
+        document.write(sb+"<br>");
+
+    </script>
+</body>
+</html>

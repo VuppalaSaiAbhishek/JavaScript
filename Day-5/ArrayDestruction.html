@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array Destruction Conpect of Dividing a Complex array  into SmallerParts
+        //We have 2 types
+        //1)Spread --Dividing Array into Small Parts
+        //2)rest
+
+        //1.Spread
+        var a = ["A","B","C","D","E","F"];
+        var b = ["Z","Y","X"];
+        var c = [...a,...b] //[A,B,C,D,E,F,Z,Y,X]
+        var [item1,item2,...all]=a; // item1 = A ,item2 = B , all = C,D,E,F
+        document.write(item1);
+
+        //2.Rest -- Adding Small Parts into Complex Structure
+        function addition(...arr){
+            sum =0 
+            for(let a of arr){
+                sum += a
+            }
+            document.write(sum+"<br>")
+        }
+        addition(2,3);
+        addition(1,2,3,4,5,6,7);
+
+
+    </script>
+</body>
+</html>

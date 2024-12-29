@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = [
+         {firstName:"Abhishek",lastName:"Vuppala",age:21},
+         {firstName:"Vasu",lastName:"Niramala",age:77},
+         {firstName:"Dinesh",lastName:"Godda",age:28},
+         {firstName:"Nitesh",lastName:"Dunna",age:21}
+        ];
+        var fullnames = users.map((ele)=>ele.firstName+" "+ele.lastName);
+        document.write(fullnames);
+ 
+        const output = users.reduce((acc,curr)=>{
+         if(acc[curr.age]){
+             acc[curr.age]++;
+         }
+         else{
+             acc[curr.age]=1
+         }
+         return acc;
+        },{})
+        console.log(output)
+ 
+ 
+ 
+        var names = users.filter((ele)=>{
+         if(ele.age<30){
+             return ele.firstName;
+         }
+        }).map((x)=>x.firstName)
+        console.log(names)
+ 
+        var names1 = users.reduce((acc,curr)=>{
+         if(curr.age<30){
+             acc.push(curr.firstName);
+         }
+         return acc;
+        },[])
+        document.write("<br>")
+        document.write(names1)
+     </script>
+</body>
+</html>

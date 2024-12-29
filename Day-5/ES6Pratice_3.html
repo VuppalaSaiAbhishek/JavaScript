@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Task:
+
+// Use filter to select products with a rating greater than 4.2.
+// Sort the filtered products by price in descending order.
+// Use map to create a new array of just product names in the   sorted order
+        const products = [
+            { name: "Phone", price: 800, rating: 4.8 },
+            { name: "Tablet", price: 500, rating: 4.2 },
+            { name: "Monitor", price: 300, rating: 4.0 },
+            { name: "Laptop", price: 1000, rating: 4.5 },
+        ];
+        var Sp = products.filter((ele)=>ele.rating>=4.2)
+        console.log(Sp);
+
+
+    </script>
+</body>
+</html>

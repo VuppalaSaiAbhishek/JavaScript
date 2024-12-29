@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [11,90,345,65,76,89];
+        var big = a[0]
+        for (var i=0;i<a.length;i++){
+            if(a[i]>big){
+                big = a[i];
+            }
+        }
+        document.write(big);
+        var big = a[0]
+        for(let i of a){   //This is 2nd method for for loop
+            if(i>big){
+                big = i
+            }
+        }
+        document.write(big)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Objects Can be Created In 4 Methods 
+        //1) Object Literals
+        //2) With new Reference
+        //3) Constructor Reference
+        //4) ES6 Class
+
+        //1) Object Literals
+        var mobile={
+            mobileName:"9GT",
+            mobileCompany:"OnePlus",
+            Processor:"SD888",
+            Storage:"128gb",
+            Price:40000
+        };
+        
+        for(let k in mobile){
+            document.write(`${k}:${mobile[k]}<br>`)
+        }
+        document.write("<br>")
+        document.write("<br>")
+        //2) With New Keyword Refernce
+        var m1 = new object();
+        m1.mobileName = "M21";
+        m1.MobileCompany ="Samsung";
+        m1.price=50000;
+
+        for(let k in m1){
+            document.write(`${k}:${m1[k]}`);
+        }
+    </script>
+</body>
+</html>

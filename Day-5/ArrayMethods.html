@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //There Are Some Of Array Methods
+        //Push
+        //Pop
+        //Shift
+        //Unshift
+        //Splice
+        //delete
+        //Sort
+        //Length
+        //Reverse
+        //Join
+        //LastIndexof
+
+        //Push--> Add Element at end
+        var arr=[1,2,3,4,5,6];
+        arr.push(6);
+        document.write(arr); //1,2,3,4,5,6
+
+        //Pop --> Remove Element from end
+        var arr1=[1,2,3,4,5,6]
+        arr1.pop();
+        document.write("<br>");
+        document.write(arr1) //1,2,3,4,5
+
+        //Shift--> Remove First Element
+        var arr2=[1,2,3,4,5,6]
+        arr2.shift();
+        document.write("<br>");
+        document.write(arr2); //2,3,4,5,6
+
+        //Unshift--> To add Element at Beginning
+        var arr3=[1,2,3,4,5,6]
+        arr3.unshift(0);
+        document.write("<br>");
+        document.write(arr3);
+
+        //Splice--> To Remove or Add Elements at any Position
+        //It has 3 Parameters 
+        //1st -- Position Where we Want to Perfom Operation
+        //2nd -- no.of Elements to delete
+        //3rd -- new Elements to add
+        var arr4 = [1,2,3,4,5,6]
+        arr4.splice(1,2)//1,4,5,6
+        document.write("<br>");
+        document.write(arr4); //1,4,5,6
+        arr4 = [1,2,3,4,5,6]
+        arr4.splice(2,2,8) //After from index 2 it will delete 2 numbers that are 3,4 
+        document.write("<br>");
+        document.write(arr4);//1,2,8,5,6 
+
+        //Delete --> It will Not delete the element it just hidden thr Element
+        arr4 = [1,2,3,4,5,6]
+        delete arr4[2];
+        document.write("<br>");
+        document.write(arr4); //1,2,,4,5,6
+
+        //Sort --> It Will the Numbers in Ascending order if String Then It will Sort by Dictonry Order
+        arr4 = [8,5,6,3,2,1,5,2,]
+        arr4.sort()
+        document.write("<br>");
+        document.write(arr4); //1,2,2,3,5,5,6,8
+
+        arr4 = ["E","R","L","P"]
+        arr4.sort();
+        document.write("<br>");
+        document.write(arr4); //E,L,P,R
+
+        arr4 = ["Zebra","Abhishek","Nothing"]
+        arr4.sort();
+        document.write("<br>");
+        document.write(arr4); //Abhishek,Nothing,Zebra
+
+        //Length -- It Will give the Array Lenght
+        arr4 = [1,2,3,4,5,6]
+        document.write("<br>");
+        document.write(arr4.length); //6
+
+        //Reverse -- It Will Reverse the Array
+        arr4 = [1,2,3,4,5,6]
+        arr4.reverse()
+        document.write("<br>");
+        document.write(arr4); //6,5,4,3,2,1
+
+        //Join -- It Will Join the Specific Elements in Between The Elemnts 
+        arr4 = [1,2,3,4,5,6]
+        document.write("<br>");
+        document.write(arr4.join("*")); //1*2*3*4*5*6
+
+        //LastIndexOf -- It will Find The Index of Specific Element
+        arr4 = ["A","B","T","P","K","L"]
+        document.write("<br>");
+        document.write(arr4.lastIndexOf("P")); //3
+
+        arr4 = ["A","B","T","P","K","L","P"]
+        document.write("<br>");
+        document.write(arr4.lastIndexOf("P")); //6 Now answer is Because The Last Arrival of "P" is 6
+    </script>
+</body>
+</html>
