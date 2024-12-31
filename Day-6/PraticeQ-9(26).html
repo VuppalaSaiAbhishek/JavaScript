@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1600,4000,2020,2004,1995,1998,5678,9900]
+        var na = a.filter((ele)=>{
+            if((ele%400==0)|| (ele%100!=0)&&(ele%4==0)){
+                return ele;
+            }
+        });
+        console.log(na);
+    </script>
+</body>
+</html>

@@ -13,6 +13,17 @@
             { movieName: 'Movie D', movieHero: 'Hero D', movieGenre: 'Horror', releaseDate: '2018-04-05' },
             { movieName: 'Movie A', movieHero: 'Hero A', movieGenre: 'Action', releaseDate: '2020-01-15' },
         ];
+        var nm = movies.map((ele)=>ele.releaseDate);
+        var new_movies=[]
+        nm.sort();
+        for (let i of nm){
+            for(let j of movies){
+                if(i==j.releaseDate){
+                    new_movies.push(j);
+                }
+            }
+        }
+        console.log(new_movies);
     </script>
 </body>
 </html>

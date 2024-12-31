@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to store factorials of each number into new array from given array
+
+        arr =[3,6,5,7,2,9]
+        var new_arr = arr.map((ele)=>{
+            sum =1;
+            while(ele!=0){
+                sum*=ele
+                ele--;
+            }
+            return sum;
+        })
+        console.log(new_arr);
+    </script>
+</body>
+</html>

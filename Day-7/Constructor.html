@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{ 
+            PersonName="Basha";
+            PersonAge=25;
+            PersonDetails="Surya";          
+           constructor(PersonName,PersonAge,PersonDetails){
+               this.PersonName = PersonName
+               this.PersonAge = PersonAge
+               this.PersonDetails = PersonDetails
+            }
+            displayDetails(){
+                document.write(`${this.PersonName},${this.PersonDetails},${this.PersonAge},${this.isAdult}`);
+            }
+            static greet(){
+                document.write("<br> Hello World <br>");
+            }
+        }
+        var p1 = new person("Abhishek",21,"HYD",18);
+        p1.displayDetails();
+        person.greet();
+
+        var p2 = new person();
+
+        p2.displayDetails();
+        person.greet();
+    </script>
+</body>
+</html>
