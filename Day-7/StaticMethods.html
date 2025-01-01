@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            personName = "Lity";
+            constructor(personName,personAge,personAddress){
+                this.personName = personName;
+                this.personAge = personAge;
+                this.personAddress = personAddress;
+            }
+                
+            displayDetails(){
+                    document.write(`${this.personName},${this.personAge},${this.personAddress}`);
+                }
+
+            static work(p1){
+                    document.write(`<br> ${p1.personName} is on Work Do not Disturb`);
+                }
+        }
+        //You Can Not directly access the access the instance varible through the static methods so like there is second method is mention below
+        var p1 = new person("Abhishek",25,"HYD");
+        p1.displayDetails();
+        person.work(p1);
+
+        document.write(`<br>`)
+        document.write(`<br>`)
+        class person1{
+            static work = "Code";
+            constructor(personName,personAge,personAddress){
+                this.personName = personName;
+                this.personAge = personAge;
+                this.personAddress = personAddress;
+            }
+            displayDetails(){
+                document.write(`<br>${this.personName},${this.personAge},${this.personAddress}`);
+            }
+            static working(){
+                document.write(`<br>${this.work}`);
+            }
+        }
+        //By declare the varible as static also we can call in static methods
+        var p2 = new person1("Abhishek",25,"HYD");
+        p2.displayDetails();
+        person1.working();
+    </script>
+</body>
+</html>

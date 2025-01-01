@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(personName,personAge,personAddress){
+                this.personName=personName;
+                this.personAge=personAge;
+                this.personAddress=personAddress;
+            }
+            displayDetails(){
+                document.write(`${this.personName},${this.personAge},${this.personAddress}`);
+            }
+            static Speak(p1){
+                document.write(`<br>${p1.personName} is Speaking`);
+            }
+        }
+        class human extends person{
+            constructor(personName,personAge,personAddress,personGender){
+                super(personName,personAge,personAddress);
+                this.personGender=personGender;
+            }
+            displayChild(){
+                document.write(`${this.personName},${this.personAge},${this.personAddress},${this.personGender}`);
+            }
+            static walk(h1){
+                document.write(`${h1.personName} is Speaking`)
+            }
+        }
+
+        var h1 = new human("Abhishek",98,"HYD","Male")
+        h1.displayChild();
+        human.walk(h1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(personName,personAge,personAddress){
+                this.personName=personName;
+                this.personAge=personAge;
+                this.personAddress=personAddress;
+            }
+            displaydetails(){
+                document.write(`${this.personName},${this.personAge},${this.personAddress}`);
+            }
+        }
+        class human extends person{
+            constructor(personName,personAge,personAddress,personGender){
+                super(personName,personAge,personAddress);
+                this.personGender=personGender;
+            }
+            displayChild(){
+                super.displaydetails();
+            }
+        }
+        var h1 = new human("Abhishek",52,"HYD","Male");
+        h1.displayChild();
+    </script>
+</body>
+</html>

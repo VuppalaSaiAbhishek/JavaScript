@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i =0
+        function x(){
+            setTimeout(()=>{
+                i++
+                console.log(i);
+                if(i==10){
+                    clearInterval(a);
+                }
+            })
+                 
+        }
+        var a = setInterval(x,1000);
+
+
+
+        i = 0
+        function timmer(){
+            i++;
+            console.log(i);
+        }
+        function y(){
+            setTimeout(timmer)
+            if(i==15){
+                clearInterval(b);
+            }
+        }
+        var b  = setInterval(y,1000)
+    </script>
+</body>
+</html>

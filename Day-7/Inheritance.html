@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            personName = "Lity";
+            constructor(personName,personAge,personAddress){
+                this.personName = personName;
+                this.personAge = personAge;
+                this.personAddress = personAddress;
+            }
+                
+            displayDetails(){
+                    document.write(`${this.personName},${this.personAge},${this.personAddress}`);
+                }
+
+            static work(p1){
+                    document.write(`<br> ${p1.personName} is on Work Do not Disturb`);
+                }
+        }
+        class human extends person{
+            walking(){
+                document.write(`${this.personName}`);
+            }
+        }
+        var ob1 = new human("Abhishek",25,"HYD");
+        ob1.walking();
+    </script>
+</body>
+</html>
