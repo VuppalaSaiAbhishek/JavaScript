@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Timer"></h1>
+    <button onclick="Start()">Start</button>
+    <button onclick="Stop()">Stop</button>
+    <button onclick="Reset()">Reset</button>
+    <script>
+        var sec = 0;
+        var min = 0;
+        var hour = 0;
+        var z;
+        function Start(){
+            z = setInterval(()=>{
+                sec++;
+                console.log(`${hour.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`);
+                if(sec==60){
+                    min++;
+                    sec=0
+                if(min==60){
+                    hour++;
+                    min=0;
+                    sec=0;
+                }
+                }
+                },1000)
+        }
+        function Stop(){
+            clearInterval(z);
+        }
+        function Reset(){
+            clearInterval(z);
+            sec=0
+            min=0
+            hour=0
+            console.log(`${hour.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`);
+        }
+    </script>
+</body>
+</html>

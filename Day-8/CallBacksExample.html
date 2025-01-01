@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //If There is No Call Backs
+        function open(){
+            console.log("Wecome to amazon")
+        }
+        function SearchProduct(){
+            setTimeout(()=>{
+                console.log("Searching Prodct......Going to Call Database")
+
+            },1000)
+            
+        }
+        function display(){
+            console.log("Display Products")
+        }
+        open();
+        SearchProduct();
+        display();
+
+
+
+        //If We Use Call Backs
+       console.log("If we Use Call Backs")
+        function open1(){
+            console.log("Wecome to amazon")
+        }
+        function SearchProduct1(callback){
+            setTimeout(()=>{
+                console.log("Searching Prodct......Going to Call Database")
+                callback()
+
+            },2000)
+            
+        }
+        function display1(){
+            console.log("Display Products")
+        }
+        open1();
+        SearchProduct1(display1);
+    </script>
+</body>
+</html>

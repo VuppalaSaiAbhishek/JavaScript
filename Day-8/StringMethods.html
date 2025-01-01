@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //String Methods 
+        //1)toUppercase(); -- To Change to Upper Case
+        //2)toLowerCase(); -- To Change to lower Case
+        //3)length -- To Find the Length
+        //4)substring(Start,End) -- return SubString from Start to End based on Start and End
+        //5)slice(Start,End) -- return SubString from Start to End based on Start and End same has subString
+        //6)substr(Start,Length) -- return the start point to its length
+        //7)indexOf() -- return index of element gives only first occurance
+        //8)lastIndexOf() -- return index of element gives only last occurance
+        //9)startWith(); -- Check and return True/False 
+        //10)endsWith(); -- Check and return True/False 
+        //11)padStart(count,'ele'); -- ex: Add 00 in front of element 001
+        //12)padEnd(count,'Ele'); -- ex: Add 00 at the end of element 100
+        //13)includes -- check wheather the element on string
+        //14)split -- Convert String in to Array
+        //15)toString -- Convert into String
+        //16)charAt('9') -- By Taking index return character in string
+
+        var a = "Abhishek";
+        var b = 1
+        console.log(a.toUpperCase());
+        console.log(a.toLowerCase());
+        console.log(a.length);
+        console.log(a.substring(1,5));
+        console.log(a.slice(1,5));
+        console.log(a.substr(1,5));
+        console.log(a.indexOf('h'));
+        console.log(a.lastIndexOf('h'));
+        console.log(a.startsWith('A'));
+        console.log(a.endsWith('A'));
+        console.log(b.toString())
+        console.log(b.toString().padStart(3,'0'));
+        console.log(b.toString().padEnd(3,'0'));
+        console.log(a.split(''));
+        console.log(a.includes("bhi"));
+        console.log(a.charAt(2))
+    </script>
+</body>
+</html>
