@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // write a javascript program to check given number is palindrome number or not
+
+        var a = parseInt(prompt("Enter the Number"));
+        var z = a
+        var sum = 0
+        while(a!=0){
+            let r = a%10;
+            sum = sum*10+r;
+            a = parseInt(a/10);
+        }
+        console.log(sum);
+        if(z == sum){
+            console.log("Its a Palidrom");
+        }
+        else{
+            console.log("Its not a palidrom");
+        }
+    </script>
+</body>
+</html>

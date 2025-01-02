@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        small = Infinity
+        ssmall = Infinity
+        var a = [23,0,76,89,90,67,89,90,65]
+        for(let i=0;i<a.length;i++){
+            if(small>a[i]){
+                ssmall = small
+                small = a[i]
+            }
+            if(small<a[i]&& a[i]<ssmall){
+                ssmall = a[i];
+            }
+        }
+        console.log(small);
+        console.log(ssmall);
+    </script>
+</body>
+</html>

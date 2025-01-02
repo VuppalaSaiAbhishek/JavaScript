@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to check given number is armstrong number or not
+
+        var a = parseInt(prompt("Enter a Number"));
+        var b = a.toString().length;
+        var c = a
+        var sum = 0
+        while(c!=0){
+            let r = c%10
+            sum = sum+(r**b)
+            c = parseInt(c/10);
+        }
+        console.log(sum);
+        if(a==sum){
+            console.log("It is A ArmStrong Number");
+        }
+        else{
+            console.log("Its not a Armstrong Number");
+        }
+    </script>
+</body>
+</html>

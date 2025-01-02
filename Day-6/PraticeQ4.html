@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript program to count number of duplicates elements of an array
+        var a = [45,54,65,76,76,78,78,90,34,54]
+        var c ={}
+        var result = a.reduce((acc,curr)=>{
+            if(c[curr]){
+                acc++
+            }
+            else{
+                c[curr] = 1;
+            }
+            return acc;
+        },0)
+        console.log(result);
+    </script>
+</body>
+</html>

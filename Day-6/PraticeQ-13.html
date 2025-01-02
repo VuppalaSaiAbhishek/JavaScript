@@ -7,7 +7,47 @@
 </head>
 <body>
     <script>
-        
+        // Write a JavaScript program to create subclasses for different types of people (e.g., Student, Teacher) inheriting from the Person class and adding additional properties and methods. 
+
+        class person{
+            walk(){
+                console.log("Person Can Walk");
+            }
+            sleep(){
+                console.log("Person Can Slepp");
+            }
+            Dream(){
+                console.log("Person Can Dream");
+            }
+            Run(){
+                console.log("Person Can Run");
+            }
+            Breath(){
+                console.log("Person Can Breath");
+            }
+        }
+        class Student extends person{
+            Study(){
+                console.log("Student Study");
+            }
+            DriveCycle(){
+                console.log("Student drive Cycle");
+            }
+        }
+        class Teacher extends person{
+            Teacher(){
+                console.log("Teacher Teach")
+            }
+            DriveBike(){
+                console.log("Teacher Drive Bike");
+            }
+        }
+        var T1 = new Teacher();
+        var S1 = new Student();
+        T1.walk();
+        T1.Teacher();
+        S1.Study();
+        S1.sleep();
     </script>
 </body>
 </html>

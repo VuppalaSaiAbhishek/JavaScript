@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //16. write a javascript program to remove odd numbers from given array 
+
+        var a = [34,65,76,87,98,90,23,32,42,5,15,72]
+        var result = a.filter((ele)=>{
+            if(ele%2!=1){
+                return ele;
+            }
+        })
+        console.log(result);
+    </script>
+</body>
+</html>

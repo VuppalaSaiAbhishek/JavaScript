@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to find the second largest element in an array.
+        var a = [56,89,90,89,78,65,34,42]
+        var l = -Infinity
+        var sl = -Infinity
+        for(let i=0;i<a.length;i++){
+            if(a[i]>l){
+                sl = l
+                l = a[i]
+            }
+            if(a[i]>sl && a[i]<l){
+                sl = a[i];
+            }
+        }
+        console.log(l);
+        console.log(sl);
+    </script>
+</body>
+</html>

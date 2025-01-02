@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to count number of vowels in a string 
+        var a = prompt("Enter the value");
+        var b = a.split("");
+        console.log(b);
+        var result = b.reduce((curr,acc)=>{
+                if(acc=='A'||acc=='E'||acc=='I'||acc=='O'||acc=='U'||acc=='a'||acc=='e'||acc=='i'||acc=='o'||acc=='u')
+                {
+                    curr++;
+                }
+                return curr
+        },0);
+        console.log(result);
+    </script>
+</body>
+</html>
