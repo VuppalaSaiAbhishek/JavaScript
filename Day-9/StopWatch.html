@@ -6,15 +6,38 @@
     <title>Document</title>
 </head>
 <body>
-        <label>Hours</label>
-        <input type="number">
-        <br>
-        <label>Minutes</label>
-        <input type="number">
-        <br>
-        <label>Seconds</label>
-        <input type="number">
-    <script> 
+    <h1 id="Timer"></h1>
+    <script>
+        
+        var Hours = parseInt(prompt("Enter the Number of Hours"));
+        var min = parseInt(prompt("Enter the number of Minites"));
+        var sec = parseInt(prompt("Enter the Number of Seconds"));
+        function Timer(){
+                var a = setInterval(()=>{
+                    document.getElementById('Timer').innerHTML=`${Hours.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`
+                    if(sec==0){
+                        if(min==0){
+                            if(Hours==0){
+                                clearInterval(a);
+                            }
+                            else{
+                                Hours--;
+                                min=59;
+                                sec=59;
+                            }
+                        }
+                        else{
+                            min--;
+                            sec=59
+                        }
+                    }
+                    else{
+                        sec--;
+                    }
+                },1000)
+
+        }
+        Timer()
     </script>
 </body>
 </html>
