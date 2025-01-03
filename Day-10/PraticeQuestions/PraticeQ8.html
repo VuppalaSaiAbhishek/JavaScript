@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Find the youngest person from an array of objects containing name and age.
+        people = [
+            { name: 'Anna', age: 25 },
+            { name: 'Mark', age: 20 },
+            { name: 'Sophia', age: 30 },
+        ];
+         var s = people.reduce((acc,curr)=>{
+                    if(acc.age>curr.age){
+                        acc = curr
+                    }
+                    return acc
+         },{name:'',age:Infinity})
+         console.log(s);
+        
+        </script>
+</body>
+</html>

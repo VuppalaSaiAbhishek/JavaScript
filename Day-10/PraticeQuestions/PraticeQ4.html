@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to find the nth Fibonacci numbers
+
+        var n = parseInt(prompt("Enter a Number"))
+        function Fibonacci(n){
+            n1 =0
+            n2 = 1
+            let next;
+            if(n==1){
+                return n1;
+            }
+            if(n==2){
+                return n2;
+            }
+            for(let i=3;i<=n;i++){
+                next = n1+n2;
+                n1 = n2
+                n2 = next
+            }
+            return next
+            
+        }
+        console.log(Fibonacci(n));
+    </script>
+</body>
+</html>

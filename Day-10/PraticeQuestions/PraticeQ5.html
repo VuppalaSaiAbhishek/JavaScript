@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to create a function that takes a string and replaces vowels with *
+        var i = "Abhishek"
+        var s='';
+        for(let a of i.split('')){
+            if(a=='A' || a=='E' ||a=='I' ||a=='O' ||a=='U' ||a=='a' ||a=='e' ||a=='i' ||a=='i' || a=='u'){
+                s = s+'*';
+            }
+            else{
+                s = s+a;
+            }
+        }
+        console.log(s);
+
+        
+        var b = "AEIOUaeiou"
+        var j = "Abhishek";
+        var z = j.split('').reduce((acc,curr)=>{
+            if(b.includes(curr)){
+                acc+='*'
+            }
+            else{
+                acc += curr
+            }
+            return acc;
+        },"")
+        console.log(z)
+    </script>
+</body>
+</html>

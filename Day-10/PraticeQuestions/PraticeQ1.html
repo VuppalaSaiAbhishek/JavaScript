@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program that prints the numbers from 1 to n. However, for multiples of 3, print "Fizz" instead of the number, for multiples of 5, print "Buzz", and for numbers which are multiples of both 3 and 5, print "FizzBuzz".
+        var n = parseInt(prompt("Enter the Number"));
+        for (let i=1;i<=n;i++){
+            if(i%3==0 && i%5==0){
+                console.log("FizzBuzz");
+            }
+            else if(i%5==0){
+                console.log("Buzz");
+            }
+            else if(i%3==0){
+                console.log("Fizz");
+            }
+            else{
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Promise -- Promise is a object in JS represents the evential completion of asynchoronus operations
+        var a = parseInt(prompt("Enter a age"));
+        let checkAge = new Promise((resolve,reject)=>{
+            if(a>18){
+                resolve("You are Eligible");
+            }
+            else{
+                reject("You are Not Eligilible");
+            }
+        });
+    checkAge.then((b)=>console.log(b));
+    checkAge.catch((c)=>console.log(c));
+    checkAge.finally(()=>{document.write("Hello")});
+
+
+    function checkAge1(a){
+        return new Promise((resolve,reject)=>{
+            if(a>18){
+                resolve("You are Eligible");
+            }
+            else{
+                reject("You are Not Eligilible");
+            }
+        });
+    }
+    checkAge1(a)
+        .then((msg)=>console.log(msg))
+        .catch((err)=>console.log(err))
+        .finally(()=>document.write("completed"))
+    </script>
+</body>
+</html>

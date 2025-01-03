@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function UserData(){
+        new Promise((resolve,reject)=>{
+            fetch('https://fakestoreapi.com/products')
+            .then((data)=>{return data.json()})
+            .then((data)=>{
+                for(let i of data){
+                    if(i.id){
+                        resolve("Product Avaible");
+                    }
+                    else{
+                        reject("Product UnAvailable");
+                    }
+                }
+            }).catch(error => reject(`Error fetching data: ${error}`));
+        })
+    }
+    UserData()
+        .then((a)=>console.log(a))
+        .catch((msg)=>console.log(msg));
+    </script>
+</body>
+</html>

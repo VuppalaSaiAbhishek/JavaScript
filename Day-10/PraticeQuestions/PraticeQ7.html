@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="Table">
+        <tr>
+            <th>names</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        
+    </table>
+    <script>
+        //Write a JavaScript program to fetch a list of users from an API and display their names,email,phone number in a table
+        //(https://jsonplaceholder.typicode.com/users)
+        function Fetching(){
+            fetch('https://jsonplaceholder.typicode.com/users').then((a)=>a.json()).then((b)=>{
+                console.table(b);
+                for(let i of b){
+                    document.getElementById('Table').innerHTML+=`
+                    <tr>
+                    <td>${i.name}</td>
+                    <td>${i.email}</td>
+                    <td>${i.phone}</td>
+                    </tr>`
+
+                }
+                })
+        }
+        Fetching()
+    </script>
+</body>
+</html>

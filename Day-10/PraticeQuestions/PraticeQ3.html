@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript program to group an array of numbers into even and odd categories using reduce.
+
+        var a = [23,45,65,78,89,9,6,90]
+        var b = a.reduce((acc,curr)=>{
+            if(curr%2==0){
+                acc.even.push(curr)
+            }
+            else if(curr%2==1){
+                acc.odd.push(curr)
+            }
+            return acc;
+        },{even:[],odd:[]})
+        console.log(b);
+    </script>
+</body>
+</html>
