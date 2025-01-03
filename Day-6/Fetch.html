@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="First"></table>
+    <script>
+    
+        function loadproducts(){
+            fetch('https://fakestoreapi.com/products').then((result)=>result.json()).then((data)=>{
+                console.table(data);
+                for(let d of data){
+                    document.getElementById("First").innerHTML+=`<tr>
+                            <td>${d.id}</td>
+                            <td>${d.title}</td>
+                            <td>${d.price}</td>
+                            <td><img src=${d.image} width=30px height=30px></td>
+                            <td>${d.description}</td>
+                        </tr>`
+                }
+            })
+        }
+        loadproducts();
+    </script>
+</body>
+</html>

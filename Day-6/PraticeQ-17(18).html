@@ -10,8 +10,8 @@
         var a = parseInt(prompt("Enter a Number"))
         var b = parseInt(prompt("Enter a Second Number"));
         var s = a<b?a:b
-        var result = 1;
-        for(let i=2;i<s;i++){
+        var result;
+        for(let i=1;i<=s;i++){
             if(a%i==0 && b%i==0){
                result = i;
             }
