@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cart =["Shoes","Pants","Kurta"];
+        CreateOrder(cart)
+            .then((cid)=>{
+                console.log("Proced the cart");
+                return ProcedToPayment(cid);
+            })
+            .catch((msg)=>console.log(msg))
+
+            .then((pid)=>{
+                console.log("Proced the Payment")
+                return ShowOrderSummary(pid);
+            })
+            .catch((msg)=>console.log(msg))
+
+            .then((Pid)=>{
+                console.log("Procedd the ShowSummary")
+                return UpdateWallet(Pid);
+            })
+            .catch((msg)=>console.log(msg))
+
+            .then((ssid)=>console.log(ssid))
+            .catch((msg)=>console.log(msg));
+
+        function CreateOrder(cart){
+            return new Promise((resolve,reject)=>{
+                if(cart.length==4){
+                    resolve(1020);
+                }
+                else{
+                    reject("It is Not a Cart")
+                }
+            });
+        }
+
+        function ProcedToPayment(cid){
+            return new Promise((resolve,reject)=>{
+                if(cid==1020){
+                    resolve(121)
+                }
+                else{
+                    reject("It is Not a  Proced To Payment")
+                }
+            });
+        }
+
+        function ShowOrderSummary(pid){
+            return new Promise((resolve,reject)=>{
+                if(pid==121){
+                    resolve(2556)
+                }
+                else{
+                    reject("Its is Not a Show Order Summary");
+                }
+            });
+        }
+        function UpdateWallet(ssid){
+            return new Promise((resolve,reject)=>{
+                if(ssid == 2556){
+                    resolve(1001)
+                }
+                else{
+                    reject("No a Update Wallet")
+                }
+
+            });
+        }
+    </script>
+</body>
+</html>

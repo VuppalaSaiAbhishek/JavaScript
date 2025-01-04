@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Promise.all()
+        //i am using dummy promises in real-time we use API by using fecth methos
+
+        var p1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>resolve("P1 Success"),3000);
+        })
+
+        var p2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>reject("P2 failed"),1000);
+        })
+
+         var p3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>resolve("P3 Success"),2000);
+         })
+
+         Promise.all([p1,p2,p3]).then((msg)=>console.log(msg)).catch((err)=>console.error(err));
+    </script>
+</body>
+</html>

@@ -7,8 +7,31 @@
 </head>
 <body>
     <script>
+        var a =[]
         //Write a JavaScript program to print student details who got highest marks, create objects using class 
+        class student{
+            static studentData =[]
+            constructor(studentName,StudnetMarks){
+                this.studentName = studentName;
+                this.StudnetMarks = StudnetMarks
+                student.studentData.push(this)
+            }
+            
+            
 
+            
+        }
+        var s1 = new student("John",86);
+        var s2 = new student("Jerry",90)
+        var s3 = new student("Keny",99);
+
+        arr1 = student.studentData.reduce((acc,curr)=>{
+            if(curr.StudnetMarks>acc){
+                acc = curr.StudnetMarks;
+            }
+            return acc
+        },0)
+        console.log(arr1)
     </script>
 </body>
 </html>
