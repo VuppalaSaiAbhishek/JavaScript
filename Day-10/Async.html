@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Success Promise 1")
+            },10000)
+        })
+        var b = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Success Promise 2")
+            },5000)
+        })
+        // function CallingPromise(){
+        //     a.then((res)=>console.log(res));
+        //     console.log("Grand Success1")
+        //     b.then((res)=>console.log(res))
+        //     console.log("Grand Success2")
+        // }
+        // CallingPromise();
+
+        //Async and Await
+        async function UsingAsync() {
+            var z = await a;
+            console.log(z);
+            console.log("Grand Success 1")
+            var y = await b;
+            console.log(y);
+            console.log("Grand Success 2");          
+        }
+        UsingAsync()
+    </script>
+</body>
+</html>
