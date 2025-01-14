@@ -13,8 +13,6 @@
                 console.log("Proced the cart");
                 return ProcedToPayment(cid);
             })
-            .catch((msg)=>console.log(msg))
-
             .then((pid)=>{
                 console.log("Proced the Payment")
                 return ShowOrderSummary(pid);
@@ -26,9 +24,6 @@
                 return UpdateWallet(Pid);
             })
             .catch((msg)=>console.log(msg))
-
-            .then((ssid)=>console.log(ssid))
-            .catch((msg)=>console.log(msg));
 
         function CreateOrder(cart){
             return new Promise((resolve,reject)=>{

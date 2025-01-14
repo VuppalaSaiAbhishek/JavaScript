@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    div{
+        min-width: 100px;
+        min-height: 100px;
+        padding: 30px;
+        border: 1px solid black;
+    }
+   
+</style>
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("grandparent").addEventListener('click',()=>{
+        console.log("Grand Parent Clicked");
+    },true)
+    document.getElementById("parent").addEventListener('click',()=>{
+        console.log("Parent Clicked");
+    },true)
+    document.getElementById("child").addEventListener('click',()=>{
+        console.log("child Clicked");
+    },true)
+</script>
+</html>
