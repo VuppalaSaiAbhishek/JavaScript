@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Form">
+    <input type="text" id="name" data-uppercase>
+    <input type="text" id="pan">
+    <input type="text" id="mobile">
+    </form>
+</body>
+<script>
+    document.getElementById("Form").addEventListener('click',(e)=>{
+        if(e.target.dataset.uppercase == ""){
+            e.target.value = e.target.value.toUpperCase()
+        }
+    })
+</script>
+</html>
